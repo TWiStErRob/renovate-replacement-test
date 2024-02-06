@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-          - uses: actions/checkout@v3
+          - uses: actions/checkout@v4
           - uses: gradle/gradle-build-action@v3
           - name: Build and run unit tests with Gradle
             run: ./scripts/ci_unit.sh
