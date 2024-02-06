@@ -2,5 +2,52 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "local>TWiStErRob/renovate-config"
+  ],
+  "packageRules": [
+    {
+				"matchManagers": ["github-actions"],
+				"matchPackageNames": ["gradle/gradle-build-action"],
+				"replacementName": "gradle/actions/setup-gradle",
+				"replacementVersion": "3.0.0"
+			},
+			{
+				"matchDatasources": ["maven"],
+				"matchPackageNames": ["com.google.android:flexbox"],
+				"replacementName": "com.google.android.flexbox:flexbox",
+				"replacementVersion": "3.0.0"
+			},
+			{
+				"matchDatasources": ["maven"],
+				"matchPackageNames": [
+					"com.nhaarman:mockito-kotlin",
+					"com.nhaarman:mockito-kotlin-kt1.1"
+				],
+				"replacementName": "com.nhaarman.mockitokotlin2:mockito-kotlin",
+				"replacementVersion": "2.0.0"
+			},
+			{
+				"matchDatasources": ["maven"],
+				"matchPackageNames": ["com.nhaarman.mockitokotlin2:mockito-kotlin"],
+				"replacementName": "org.mockito.kotlin:mockito-kotlin",
+				"replacementVersion": "2.2.7"
+			},
+			{
+				"matchDatasources": ["maven"],
+				"matchPackageNames": ["com.github.gmazzo:gradle-buildconfig-plugin"],
+				"replacementName": "com.github.gmazzo.buildconfig:plugin",
+				"replacementVersion": "4.0.0"
+			},
+			{
+				"matchDatasources": ["maven"],
+				"matchPackageNames": ["com.squareup.retrofit:retrofit"],
+				"replacementName": "com.squareup.retrofit2:retrofit",
+				"replacementVersion": "2.0.0"
+			},
+			{
+				"matchDatasources": ["maven"],
+				"matchPackageNames": ["com.squareup.okhttp:okhttp"],
+				"replacementName": "com.squareup.okhttp3:okhttp",
+				"replacementVersion": "3.0.0"
+			}
   ]
 }
